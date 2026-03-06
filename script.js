@@ -13,7 +13,7 @@ function processConversion(toBase) {
     let [intPart, fracPart] = inputVal.split('.');
     fracPart = fracPart || "";
 
-    // --- 1. التحويل المباشر (طريقة المجموعات 3 بت أو 4 بت) كما في الصورة ---
+    // --- 1. التحويل المباشر (طريقة المجموعات 3 بت أو 4 بت)  ---
     const isDirect = (fromBase === 2 && [8, 16].includes(toBase)) || ([8, 16].includes(fromBase) && toBase === 2);
 
     if (isDirect) {
@@ -107,7 +107,7 @@ function processConversion(toBase) {
                 if (f === 0) break;
             }
         }
-        finalResultSpan.innerText = resInt + (resFrac ? "." + resFrac : "");
+         finalResultSpan.innerText = "\u200E" + resInt + (resFrac ? "." + resFrac : "");
     }
 
     stepsContainer.innerHTML = stepsHTML;
@@ -118,4 +118,5 @@ function clearAll() {
     document.getElementById('stepsContainer').innerHTML = "";
     document.getElementById('resultCard').style.display = "none";
     document.getElementById('finalResult').innerText = "";
+
 }
