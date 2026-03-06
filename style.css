@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #00d2ff;
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --accent: #238636;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg-color);
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.input-card { margin-bottom: 20px; }
+.input-group { display: flex; gap: 10px; margin-top: 10px; }
+
+input, select {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+input { flex: 2; }
+select { flex: 1; cursor: pointer; }
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { opacity: 0.8; transform: translateY(-2px); }
+
+.result-card {
+    background: #21262d;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+.final-res-box { font-size: 20px; margin-bottom: 15px; color: var(--primary-color); }
+
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+th, td { border: 1px solid #30363d; padding: 10px; text-align: center; }
+th { background: #161b22; }
+
+.step-line { margin: 8px 0; border-bottom: 1px dashed #30363d; padding-bottom: 5px; }
+.highlight { color: #f0883e; font-weight: bold; }
+.group-box {
+    display: inline-block;
+    border: 2px solid #30363d;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 8px;
+    background: #161b22;
+    min-width: 60px;
+}
+.group-box b { color: #00d2ff; font-size: 1.2em; }
+.group-box span { color: #e94560; font-weight: bold; }
